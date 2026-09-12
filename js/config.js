@@ -5,12 +5,12 @@ export const CIVICHORIZON_CONFIG = {
   // Analytics is optional. Add your GA4 Measurement ID (G-XXXXXXXXXX) before production.
   analytics: {
     enabled: true,
-    ga4MeasurementId: "",
+    ga4MeasurementId: "G-8E1TV1HS18",
     // Microsoft Clarity is optional and can be enabled later with your project ID.
-    clarityProjectId: ""
+    clarityProjectId: "yh6u2w0g5m"
   },
   // Google Form used for "Was this useful?" feedback and suggestions.
-  feedbackFormUrl: "https://forms.gle/A95VaK4HAhp4oqjB9",
+  feedbackFormUrl: "https://forms.gle/taJwtxGhPa7JXb6NA",
   listingSubmissionFormUrl: "https://forms.gle/A95VaK4HAhp4oqjB9",
   defaultListingDatasetId: "civichorizon_community_listings",
   publicListingSubmissionEnabled: true,
