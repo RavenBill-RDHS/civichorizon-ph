@@ -1,0 +1,1 @@
+export const psaPsgcAdapter={datasetId:"psa_psgc_2026_q2",fieldMapping:{psgc_code:"location_identity",Name:"name","2024 Population":"population"}};

@@ -1,0 +1,220 @@
+{
+  "schema_version": "0.6.0",
+  "architecture": "dataset -> adapter -> canonical entities -> intelligence -> presentation",
+  "datasets": [
+    {
+      "dataset_id": "psa_psgc_2026_q2",
+      "name": "PSGC 2Q 2026",
+      "provider": "Philippine Statistics Authority",
+      "reference_date": "2026-06-30",
+      "status": "active",
+      "role": "official geographic identity, population and classification"
+    },
+    {
+      "dataset_id": "gadm_phl_raw",
+      "name": "GADM Philippines",
+      "provider": "GADM",
+      "reference_date": null,
+      "status": "active",
+      "role": "administrative geometry used for area calculation"
+    },
+    {
+      "dataset_id": "civichorizon_derived",
+      "name": "CivicHorizon Derived Intelligence",
+      "provider": "CivicHorizon",
+      "reference_date": null,
+      "status": "active",
+      "role": "calculated indicators such as population density"
+    },
+    {
+      "dataset_id": "deped_schools_2026",
+      "name": "Schools",
+      "provider": "Government agency",
+      "reference_date": "2026-06-30",
+      "status": "planned",
+      "enabled": false,
+      "path": "./data/datasets/schools.json",
+      "format": "json",
+      "entity_type": "school",
+      "concept": "schools",
+      "location_fields": [
+        "psgc_code",
+        "psgcCode",
+        "location_id"
+      ]
+    },
+    {
+      "dataset_id": "doh_health_facilities_2026",
+      "name": "Hospitals and Health Facilities",
+      "provider": "Government agency",
+      "reference_date": "2026-06-30",
+      "status": "planned",
+      "enabled": false,
+      "path": "./data/datasets/hospitals.json",
+      "format": "json",
+      "entity_type": "hospital",
+      "concept": "hospitals",
+      "location_fields": [
+        "psgc_code",
+        "psgcCode",
+        "location_id"
+      ]
+    },
+    {
+      "dataset_id": "psa_cph_housing_2020_region",
+      "name": "Housing Characteristics — 2020 CPH (Regional)",
+      "provider": "Philippine Statistics Authority (PSA)",
+      "reference_date": "2020-05-01",
+      "status": "active",
+      "enabled": true,
+      "path": "./data/datasets/psa_cph_housing_2020_region.json",
+      "format": "json",
+      "entity_type": "housing_profile",
+      "concept": "housing",
+      "location_fields": [
+        "psgc_code",
+        "psgcCode"
+      ],
+      "required_fields": [
+        "psgc_code",
+        "total_housing_units_2020",
+        "occupied_housing_units_2020",
+        "occupancy_rate_2020"
+      ],
+      "unique_field": "psgc_code"
+    },
+    {
+      "dataset_id": "osm_housing_places_pangasinan_2026_09",
+      "name": "OpenStreetMap Accommodation & Housing Places — Pangasinan",
+      "provider": "OpenStreetMap contributors",
+      "reference_date": "2026-09-11",
+      "status": "active",
+      "enabled": true,
+      "path": "./data/datasets/housing_places_osm.json",
+      "format": "json",
+      "entity_type": "accommodation",
+      "concept": "housing_listings",
+      "location_fields": [
+        "psgc_code"
+      ],
+      "required_fields": [
+        "listing_id",
+        "name",
+        "psgc_code",
+        "latitude",
+        "longitude",
+        "place_type",
+        "osm_id"
+      ],
+      "unique_field": "listing_id",
+      "license": "Open Database License (ODbL) 1.0"
+    },
+    {
+      "dataset_id": "civichorizon_community_listings",
+      "name": "CivicHorizon Community Listings",
+      "provider": "CivicHorizon",
+      "reference_date": null,
+      "status": "active",
+      "enabled": true,
+      "path": "./data/datasets/community_listings.json",
+      "format": "json",
+      "entity_type": "place",
+      "concept": "community_listings",
+      "location_fields": [
+        "psgc_code"
+      ],
+      "required_fields": [
+        "listing_id",
+        "name",
+        "psgc_code",
+        "latitude",
+        "longitude",
+        "place_type"
+      ],
+      "unique_field": "listing_id"
+    }
+  ],
+  "concepts": [
+    "location_identity",
+    "population",
+    "area",
+    "population_density",
+    "classification",
+    "schools",
+    "hospitals",
+    "roads",
+    "transport",
+    "flood_hazards",
+    "businesses",
+    "housing",
+    "rental_prices",
+    "development",
+    "land_use",
+    "infrastructure",
+    "demographics",
+    "housing_listings",
+    "community_listings"
+  ],
+  "provenance_schema": [
+    "dataset_id",
+    "name",
+    "provider",
+    "reference_date",
+    "method",
+    "confidence"
+  ],
+  "dataset_contract_version": "1.3.0",
+  "geographic_join": {
+    "primary_key": "psgc_code",
+    "fallback_keys": [
+      "location_id",
+      "correspondence_code"
+    ],
+    "descendant_expansion": true,
+    "name_matching": "opt-in only",
+    "strict_mode": true
+  },
+  "validation": {
+    "strict_json": true,
+    "required_metadata": [
+      "dataset_id",
+      "name",
+      "provider"
+    ],
+    "stable_location_fields": [
+      "psgc_code",
+      "psgcCode",
+      "PSGC",
+      "location_id",
+      "locationId",
+      "correspondence_code",
+      "correspondenceCode"
+    ],
+    "optional_name_matching": false,
+    "duplicate_detection": "unique_field when configured"
+  },
+  "ingestion": {
+    "phase": "active",
+    "workspace": "local admin workspace",
+    "supported_source_formats": [
+      "csv",
+      "json"
+    ],
+    "pdf_intake": "metadata-only; extract tables to CSV/JSON before import",
+    "outputs": [
+      "validated JSON dataset",
+      "manifest dataset definition"
+    ],
+    "workflow": [
+      "load source",
+      "map fields",
+      "validate contract",
+      "inspect geographic joins",
+      "download JSON",
+      "add dataset definition to manifest",
+      "repair and normalize source data",
+      "review community submissions",
+      "publish approved place records"
+    ]
+  }
+}

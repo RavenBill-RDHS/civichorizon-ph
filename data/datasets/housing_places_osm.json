@@ -1,0 +1,123 @@
+{
+  "dataset_id": "osm_housing_places_pangasinan_2026_09",
+  "name": "OpenStreetMap Accommodation & Housing Places — Pangasinan",
+  "provider": "OpenStreetMap contributors",
+  "reference_date": "2026-09-11",
+  "status": "active",
+  "concept": "housing_listings",
+  "entity_type": "accommodation",
+  "location_fields": [
+    "psgc_code"
+  ],
+  "required_fields": [
+    "listing_id",
+    "name",
+    "psgc_code",
+    "latitude",
+    "longitude",
+    "place_type",
+    "osm_id"
+  ],
+  "unique_field": "listing_id",
+  "license": "Open Database License (ODbL) 1.0",
+  "records": [
+    {
+      "listing_id": "osm-node-5182464222",
+      "name": "Camille's Homestay",
+      "psgc_code": "0105522021",
+      "latitude": 16.03569,
+      "longitude": 120.22048,
+      "place_type": "Guest house",
+      "osm_id": "node/5182464222",
+      "source_url": "https://www.openstreetmap.org/node/5182464222",
+      "availability": "unknown",
+      "price": null,
+      "price_period": null,
+      "verified_at": null
+    },
+    {
+      "listing_id": "osm-node-6405151455",
+      "name": "Castle Apartment",
+      "psgc_code": "0105522021",
+      "latitude": 16.03042,
+      "longitude": 120.22362,
+      "place_type": "Hostel / accommodation",
+      "osm_id": "node/6405151455",
+      "source_url": "https://www.openstreetmap.org/node/6405151455",
+      "availability": "unknown",
+      "price": null,
+      "price_period": null,
+      "verified_at": null
+    },
+    {
+      "listing_id": "osm-node-5257423121",
+      "name": "Dolores Apartment",
+      "psgc_code": "0105518000",
+      "latitude": 16.03737,
+      "longitude": 120.32982,
+      "place_type": "Apartment",
+      "osm_id": "node/5257423121",
+      "source_url": "https://www.openstreetmap.org/node/5257423121",
+      "availability": "unknown",
+      "price": null,
+      "price_period": null,
+      "verified_at": null
+    },
+    {
+      "listing_id": "osm-node-4211776991",
+      "name": "Wendell's Place",
+      "psgc_code": "0105518000",
+      "latitude": 16.03368,
+      "longitude": 120.32938,
+      "place_type": "Guest house",
+      "osm_id": "node/4211776991",
+      "source_url": "https://www.openstreetmap.org/node/4211776991",
+      "availability": "unknown",
+      "price": null,
+      "price_period": null,
+      "verified_at": null
+    },
+    {
+      "listing_id": "osm-node-1763096974",
+      "name": "Gelymar Hotel",
+      "psgc_code": "0105518000",
+      "latitude": 16.0425,
+      "longitude": 120.34284,
+      "place_type": "Hostel / accommodation",
+      "osm_id": "node/1763096974",
+      "source_url": "https://www.openstreetmap.org/node/1763096974",
+      "availability": "unknown",
+      "price": null,
+      "price_period": null,
+      "verified_at": null
+    },
+    {
+      "listing_id": "osm-node-1763095770",
+      "name": "Inn Asia",
+      "psgc_code": "0105517000",
+      "latitude": 16.01755,
+      "longitude": 120.33366,
+      "place_type": "Hostel / accommodation",
+      "osm_id": "node/1763095770",
+      "source_url": "https://www.openstreetmap.org/node/1763095770",
+      "availability": "unknown",
+      "price": null,
+      "price_period": null,
+      "verified_at": null
+    },
+    {
+      "listing_id": "osm-way-1173874830",
+      "name": "Villa Maniboc Subdivision",
+      "psgc_code": "0105522021",
+      "latitude": 16.03381,
+      "longitude": 120.21632,
+      "place_type": "Residential area",
+      "osm_id": "way/1173874830",
+      "source_url": "https://www.openstreetmap.org/way/1173874830",
+      "availability": "not_applicable",
+      "price": null,
+      "price_period": null,
+      "verified_at": null
+    }
+  ]
+}

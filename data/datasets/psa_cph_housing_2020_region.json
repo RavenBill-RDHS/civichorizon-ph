@@ -1,0 +1,19 @@
+[
+  {"psgc_code":"1300000000","region":"NCR","total_housing_units_2020":3753992,"occupied_housing_units_2020":3257020,"occupancy_rate_2020":86.8},
+  {"psgc_code":"1400000000","region":"CAR","total_housing_units_2020":530287,"occupied_housing_units_2020":432668,"occupancy_rate_2020":81.6},
+  {"psgc_code":"0100000000","region":"I - Ilocos","total_housing_units_2020":1366643,"occupied_housing_units_2020":1231448,"occupancy_rate_2020":90.1},
+  {"psgc_code":"0200000000","region":"II - Cagayan Valley","total_housing_units_2020":964325,"occupied_housing_units_2020":875592,"occupancy_rate_2020":90.8},
+  {"psgc_code":"0300000000","region":"III - Central Luzon","total_housing_units_2020":3290697,"occupied_housing_units_2020":2892184,"occupancy_rate_2020":87.9},
+  {"psgc_code":"0400000000","region":"IV-A - CALABARZON","total_housing_units_2020":4442086,"occupied_housing_units_2020":3820739,"occupancy_rate_2020":86.0},
+  {"psgc_code":"1700000000","region":"MIMAROPA","total_housing_units_2020":890357,"occupied_housing_units_2020":781435,"occupancy_rate_2020":87.8},
+  {"psgc_code":"0500000000","region":"V - Bicol","total_housing_units_2020":1478159,"occupied_housing_units_2020":1342578,"occupancy_rate_2020":90.8},
+  {"psgc_code":"0600000000","region":"VI - Western Visayas","total_housing_units_2020":2135131,"occupied_housing_units_2020":1896202,"occupancy_rate_2020":88.8},
+  {"psgc_code":"0700000000","region":"VII - Central Visayas","total_housing_units_2020":2183877,"occupied_housing_units_2020":1909857,"occupancy_rate_2020":87.5},
+  {"psgc_code":"0800000000","region":"VIII - Eastern Visayas","total_housing_units_2020":1208506,"occupied_housing_units_2020":1068259,"occupancy_rate_2020":88.4},
+  {"psgc_code":"0900000000","region":"IX - Zamboanga Peninsula","total_housing_units_2020":927551,"occupied_housing_units_2020":858337,"occupancy_rate_2020":92.5},
+  {"psgc_code":"1000000000","region":"X - Northern Mindanao","total_housing_units_2020":1268286,"occupied_housing_units_2020":1131542,"occupancy_rate_2020":89.2},
+  {"psgc_code":"1100000000","region":"XI - Davao","total_housing_units_2020":1451867,"occupied_housing_units_2020":1285860,"occupancy_rate_2020":88.6},
+  {"psgc_code":"1200000000","region":"XII - SOCCSKSARGEN","total_housing_units_2020":1161316,"occupied_housing_units_2020":1037179,"occupancy_rate_2020":89.3},
+  {"psgc_code":"1600000000","region":"XIII - Caraga","total_housing_units_2020":717352,"occupied_housing_units_2020":645835,"occupancy_rate_2020":90.0},
+  {"psgc_code":"1900000000","region":"BARMM","total_housing_units_2020":733325,"occupied_housing_units_2020":724875,"occupancy_rate_2020":98.8}
+]

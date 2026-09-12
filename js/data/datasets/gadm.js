@@ -1,0 +1,1 @@
+export const gadmAdapter={datasetId:"gadm_phl_raw",fieldMapping:{GID_1:"province_geometry",GID_2:"city_municipality_geometry"}};

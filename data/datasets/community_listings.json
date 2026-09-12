@@ -1,0 +1,22 @@
+{
+  "dataset_id": "civichorizon_community_listings",
+  "name": "CivicHorizon Community Listings",
+  "provider": "CivicHorizon",
+  "reference_date": null,
+  "status": "active",
+  "concept": "community_listings",
+  "entity_type": "place",
+  "location_fields": [
+    "psgc_code"
+  ],
+  "required_fields": [
+    "listing_id",
+    "name",
+    "psgc_code",
+    "latitude",
+    "longitude",
+    "place_type"
+  ],
+  "unique_field": "listing_id",
+  "records": []
+}

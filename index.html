@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CivicHorizon — Explore Places</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="shell wide-shell">
+<header class="hero">
+  <div class="eyebrow">CIVICHORIZON PH</div>
+  <h1>Explore places. Understand the location.</h1>
+  <p class="sub">A map-first local decision tool combining Philippine geographic identity with public-source and community information.</p>
+</header>
+
+<section class="map-card">
+  <div id="map" aria-label="CivicHorizon place map"></div>
+  <div class="map-overlay">
+    <input id="placeSearch" type="search" autocomplete="off" placeholder="Search a province, city, municipality or barangay…">
+    <div id="placeResults" class="place-results"></div>
+    <div class="map-filter-panel" aria-label="Map place filters">
+      <div class="map-filter-heading"><span>WHAT ARE YOU EXPLORING?</span><span class="map-filter-hint">Map updates instantly</span></div>
+      <div class="map-filter-options">
+        <label class="filter-chip living"><input type="checkbox" class="map-type-filter" value="living" checked> <span>Living</span></label>
+        <label class="filter-chip business"><input type="checkbox" class="map-type-filter" value="business" checked> <span>Business</span></label>
+        <label class="filter-chip other"><input type="checkbox" class="map-type-filter" value="other" checked> <span>Other</span></label>
+      </div>
+      <div class="map-legend"><span><i class="legend-dot living"></i> Living</span><span><i class="legend-dot business"></i> Business</span><span><i class="legend-dot other"></i> Other</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="selectorView" class="card selector-card">
+  <div class="section-heading"><div><div class="eyebrow">LOCATION</div><h2>Choose a location</h2></div></div>
+  <div class="selector-grid">
+    <label>Province / Metro Region<select id="provinceSelect"></select></label>
+    <label>City / Municipality<select id="placeSelect" disabled></select></label>
+    <label>Barangay <span class="optional">(optional)</span><select id="barangaySelect" disabled></select></label>
+  </div>
+  <button id="checkButton" disabled>Explore This Location</button>
+  <p id="error" class="error" hidden></p>
+  <div class="contribute-card"><div><div class="eyebrow">ADD A LOCAL PLACE</div><strong>Know a local place or business?</strong><p class="sub">Community listings are free. Businesses can choose a Basic listing or an Enhanced Premium listing with more information such as contact details, hours, description, and photos.</p></div><a id="submitListingButton" class="primary-link" href="#">List a place</a></div>
+  <p class="data-status">Geographic identity · housing context · OpenStreetMap places · community information</p>
+</section>
+
+<section id="resultView" class="hidden">
+  <button id="backButton" class="text-button">← Back to map</button>
+  <div id="snapshot"></div>
+  <div id="housing"></div>
+  <div id="housingListings"></div>
+  <div id="report" class="card"></div>
+  <section id="feedback" class="card feedback-card" aria-labelledby="feedbackTitle">
+    <div class="eyebrow">HELP US IMPROVE</div>
+    <h2 id="feedbackTitle">Was this useful?</h2>
+    <p class="sub">Your feedback helps us improve CivicHorizon and decide what information to add next.</p>
+    <div class="feedback-actions" role="group" aria-label="Was this useful?">
+      <button type="button" class="feedback-button" data-feedback="yes">👍 Yes</button>
+      <button type="button" class="feedback-button" data-feedback="no">👎 Not yet</button>
+    </div>
+    <div id="feedbackThanks" class="feedback-thanks" hidden>Thank you. Your feedback helps us improve CivicHorizon.</div>
+    <a id="feedbackSuggest" class="feedback-suggest" href="#" target="_blank" rel="noopener" hidden>Have a suggestion? Tell us more →</a>
+  </section>
+</section>
+</main>
+
+<div id="listingModal" class="modal hidden" aria-hidden="true">
+  <div class="modal-backdrop" data-close-modal></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" type="button" aria-label="Close" data-close-modal>×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+<script src="https://unpkg.com/maplibre-gl@5.6.1/dist/maplibre-gl.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
